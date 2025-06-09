@@ -983,10 +983,10 @@ class AzureProvider(Provider):
                 logger.critical(
                     "It was not possible to retrieve any subscriptions, please check your permission assignments"
                 )
-                raise AzureNoSubscriptionsError(
-                    file=os.path.basename(__file__),
-                    message="No subscriptions were found, please check your permission assignments.",
-                )
+                # raise AzureNoSubscriptionsError(
+                #     file=os.path.basename(__file__),
+                #     message="No subscriptions were found, please check your permission assignments.",
+                # )
 
             tenants = subscriptions_client.tenants.list()
             for tenant in tenants:
